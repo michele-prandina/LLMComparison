@@ -102,10 +102,15 @@ const ChevronDownIcon = () => (
 
 // Add model capabilities to the pricing data
 const modelCapabilities = {
+  'gpt-5-2': ['text', 'coding', 'image'],
+  'gpt-5-mini': ['text', 'coding', 'image'],
+  'gpt-4-1': ['text', 'coding', 'image'],
   'gpt-4o': ['text', 'coding', 'image'],
   'gpt-4o-mini': ['text', 'coding', 'image'],
   'o1': ['text', 'coding'],
-  'o1-mini': ['text', 'coding'],
+  'o3': ['text', 'coding'],
+  'o3-mini': ['text', 'coding'],
+  'o4-mini': ['text', 'coding'],
   'claude-3-5-sonnet': ['text', 'coding', 'image'],
   'claude-3-5-haiku': ['text', 'coding'],
   'claude-3-opus': ['text', 'coding', 'image'],
@@ -124,7 +129,13 @@ const modelCapabilities = {
   'kimi-2-5': ['text', 'coding', 'image'],
   'eleven-turbo-v2-5': ['audio'],
   'whisper-1': ['audio'],
-  'kling-v1-5': ['video']
+  'kling-v1-5': ['video'],
+  'hf-kimi-k2-5': ['text', 'coding', 'image'],
+  'hf-deepseek-v3': ['text', 'coding'],
+  'hf-deepseek-r1': ['text', 'coding'],
+  'hf-llama-3-3-70b': ['text', 'coding'],
+  'hf-qwen-3-thinking': ['text', 'coding'],
+  'hf-llama-4-maverick': ['text', 'coding']
 }
 
 const itemVariants = {

@@ -2,6 +2,51 @@
 export const llmModels = [
   // OpenAI Models
   {
+    id: 'gpt-5-2',
+    name: 'GPT-5.2',
+    provider: 'OpenAI',
+    region: 'US',
+    inputPrice: 1.75,
+    outputPrice: 14.00,
+    contextWindow: 128000,
+    supportsCaching: true,
+    cachingDiscount: 0.90, // $1.75 vs $0.175
+    supportsBatch: true,
+    batchDiscount: 0.50,
+    tier: 'flagship',
+    pricingUrl: 'https://openai.com/api/pricing/'
+  },
+  {
+    id: 'gpt-5-mini',
+    name: 'GPT-5 Mini',
+    provider: 'OpenAI',
+    region: 'US',
+    inputPrice: 0.25,
+    outputPrice: 2.00,
+    contextWindow: 128000,
+    supportsCaching: true,
+    cachingDiscount: 0.90,
+    supportsBatch: true,
+    batchDiscount: 0.50,
+    tier: 'efficient',
+    pricingUrl: 'https://openai.com/api/pricing/'
+  },
+  {
+    id: 'gpt-4-1',
+    name: 'GPT-4.1',
+    provider: 'OpenAI',
+    region: 'US',
+    inputPrice: 2.00,
+    outputPrice: 8.00,
+    contextWindow: 128000,
+    supportsCaching: true,
+    cachingDiscount: 0.75, // $2.00 vs $0.50
+    supportsBatch: true,
+    batchDiscount: 0.50,
+    tier: 'flagship',
+    pricingUrl: 'https://openai.com/api/pricing/'
+  },
+  {
     id: 'gpt-4o',
     name: 'GPT-4o',
     provider: 'OpenAI',
@@ -10,7 +55,7 @@ export const llmModels = [
     outputPrice: 10.00,
     contextWindow: 128000,
     supportsCaching: true,
-    cachingDiscount: 0.90,
+    cachingDiscount: 0.50, // $2.50 vs $1.25 in doc
     supportsBatch: true,
     batchDiscount: 0.50,
     tier: 'flagship',
@@ -25,10 +70,40 @@ export const llmModels = [
     outputPrice: 0.60,
     contextWindow: 128000,
     supportsCaching: true,
-    cachingDiscount: 0.90,
+    cachingDiscount: 0.50, // $0.15 vs $0.075
     supportsBatch: true,
     batchDiscount: 0.50,
     tier: 'efficient',
+    pricingUrl: 'https://openai.com/api/pricing/'
+  },
+  {
+    id: 'o3',
+    name: 'o3',
+    provider: 'OpenAI',
+    region: 'US',
+    inputPrice: 2.00,
+    outputPrice: 8.00,
+    contextWindow: 200000,
+    supportsCaching: true,
+    cachingDiscount: 0.75,
+    supportsBatch: true,
+    batchDiscount: 0.50,
+    tier: 'reasoning',
+    pricingUrl: 'https://openai.com/api/pricing/'
+  },
+  {
+    id: 'o3-mini',
+    name: 'o3-mini',
+    provider: 'OpenAI',
+    region: 'US',
+    inputPrice: 1.10,
+    outputPrice: 4.40,
+    contextWindow: 128000,
+    supportsCaching: true,
+    cachingDiscount: 0.50,
+    supportsBatch: true,
+    batchDiscount: 0.50,
+    tier: 'reasoning',
     pricingUrl: 'https://openai.com/api/pricing/'
   },
   {
@@ -40,22 +115,22 @@ export const llmModels = [
     outputPrice: 60.00,
     contextWindow: 200000,
     supportsCaching: true,
-    cachingDiscount: 0.90,
+    cachingDiscount: 0.50,
     supportsBatch: true,
     batchDiscount: 0.50,
     tier: 'reasoning',
     pricingUrl: 'https://openai.com/api/pricing/'
   },
   {
-    id: 'o1-mini',
-    name: 'o1 Mini',
+    id: 'o4-mini',
+    name: 'o4-mini',
     provider: 'OpenAI',
     region: 'US',
-    inputPrice: 3.00,
-    outputPrice: 12.00,
+    inputPrice: 1.10,
+    outputPrice: 4.40,
     contextWindow: 128000,
     supportsCaching: true,
-    cachingDiscount: 0.90,
+    cachingDiscount: 0.75,
     supportsBatch: true,
     batchDiscount: 0.50,
     tier: 'reasoning',
@@ -331,6 +406,86 @@ export const llmModels = [
     tier: 'video',
     unit: 'Credits',
     pricingUrl: 'https://klingai.com/global/dev/pricing'
+  },
+
+  // Hugging Face Inference Providers
+  {
+    id: 'hf-kimi-k2-5',
+    name: 'Kimi K2.5',
+    provider: 'Together (via HF)',
+    region: 'China',
+    inputPrice: 0.50,
+    outputPrice: 2.80,
+    contextWindow: 262144,
+    supportsCaching: false,
+    supportsBatch: false,
+    tier: 'flagship',
+    pricingUrl: 'https://huggingface.co/inference/models'
+  },
+  {
+    id: 'hf-deepseek-v3',
+    name: 'DeepSeek V3',
+    provider: 'Novita (via HF)',
+    region: 'China',
+    inputPrice: 0.27,
+    outputPrice: 0.40,
+    contextWindow: 163840,
+    supportsCaching: false,
+    supportsBatch: false,
+    tier: 'flagship',
+    pricingUrl: 'https://huggingface.co/inference/models'
+  },
+  {
+    id: 'hf-deepseek-r1',
+    name: 'DeepSeek R1',
+    provider: 'Novita (via HF)',
+    region: 'China',
+    inputPrice: 0.70,
+    outputPrice: 2.50,
+    contextWindow: 64000,
+    supportsCaching: false,
+    supportsBatch: false,
+    tier: 'reasoning',
+    pricingUrl: 'https://huggingface.co/inference/models'
+  },
+  {
+    id: 'hf-llama-3-3-70b',
+    name: 'Llama 3.3 70B',
+    provider: 'Together (via HF)',
+    region: 'US',
+    inputPrice: 0.88,
+    outputPrice: 0.88,
+    contextWindow: 131072,
+    supportsCaching: false,
+    supportsBatch: false,
+    tier: 'flagship',
+    pricingUrl: 'https://huggingface.co/inference/models'
+  },
+  {
+    id: 'hf-qwen-3-thinking',
+    name: 'Qwen 3 Thinking',
+    provider: 'Novita (via HF)',
+    region: 'China',
+    inputPrice: 0.30,
+    outputPrice: 3.00,
+    contextWindow: 131072,
+    supportsCaching: false,
+    supportsBatch: false,
+    tier: 'reasoning',
+    pricingUrl: 'https://huggingface.co/inference/models'
+  },
+  {
+    id: 'hf-llama-4-maverick',
+    name: 'Llama 4 Maverick (Preview)',
+    provider: 'Groq (via HF)',
+    region: 'US',
+    inputPrice: 0.20,
+    outputPrice: 0.60,
+    contextWindow: 131072,
+    supportsCaching: false,
+    supportsBatch: false,
+    tier: 'efficient',
+    pricingUrl: 'https://huggingface.co/inference/models'
   }
 ];
 
