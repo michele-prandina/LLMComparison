@@ -296,9 +296,9 @@ function App() {
               <label>Region</label>
               <select value={filters.region} onChange={(e) => setFilters({ ...filters, region: e.target.value })}>
                 <option value="all">All Regions</option>
-                <option value="US">US</option>
-                <option value="EU">EU</option>
-                <option value="China">China</option>
+                <option value="🇺🇸">🇺🇸 US</option>
+                <option value="🇪🇺">🇪🇺 EU</option>
+                <option value="🇨🇳">🇨🇳 China</option>
               </select>
             </div>
             <div className="filter-group">
