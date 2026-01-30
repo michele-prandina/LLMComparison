@@ -131,10 +131,15 @@ const modelCapabilities = {
   'whisper-1': ['audio'],
   'kling-v1-5': ['video'],
   'hf-kimi-k2-5': ['text', 'coding', 'image'],
+  'hf-glm-4-7-flash': ['text', 'coding'],
+  'hf-minimax-m2-1': ['text', 'coding'],
   'hf-deepseek-v3': ['text', 'coding'],
+  'hf-gpt-oss-120b': ['text', 'coding'],
+  'hf-qwen-3-coder-30b': ['text', 'coding'],
   'hf-deepseek-r1': ['text', 'coding'],
   'hf-llama-3-3-70b': ['text', 'coding'],
   'hf-qwen-3-thinking': ['text', 'coding'],
+  'hf-llama-4-scout': ['text', 'coding'],
   'hf-llama-4-maverick': ['text', 'coding']
 }
 

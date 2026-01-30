@@ -423,6 +423,32 @@ export const llmModels = [
     pricingUrl: 'https://huggingface.co/inference/models'
   },
   {
+    id: 'hf-glm-4-7-flash',
+    name: 'GLM-4.7 Flash',
+    provider: 'Together (via HF)',
+    region: 'China',
+    inputPrice: 0.07,
+    outputPrice: 0.40,
+    contextWindow: 200000,
+    supportsCaching: false,
+    supportsBatch: false,
+    tier: 'efficient',
+    pricingUrl: 'https://huggingface.co/inference/models'
+  },
+  {
+    id: 'hf-minimax-m2-1',
+    name: 'MiniMax-M2.1',
+    provider: 'Together (via HF)',
+    region: 'China',
+    inputPrice: 0.30,
+    outputPrice: 1.20,
+    contextWindow: 204800,
+    supportsCaching: false,
+    supportsBatch: false,
+    tier: 'flagship',
+    pricingUrl: 'https://huggingface.co/inference/models'
+  },
+  {
     id: 'hf-deepseek-v3',
     name: 'DeepSeek V3',
     provider: 'Novita (via HF)',
@@ -433,6 +459,32 @@ export const llmModels = [
     supportsCaching: false,
     supportsBatch: false,
     tier: 'flagship',
+    pricingUrl: 'https://huggingface.co/inference/models'
+  },
+  {
+    id: 'hf-gpt-oss-120b',
+    name: 'GPT-OSS 120B',
+    provider: 'Together (via HF)',
+    region: 'US',
+    inputPrice: 0.15,
+    outputPrice: 0.75,
+    contextWindow: 131072,
+    supportsCaching: false,
+    supportsBatch: false,
+    tier: 'flagship',
+    pricingUrl: 'https://huggingface.co/inference/models'
+  },
+  {
+    id: 'hf-qwen-3-coder-30b',
+    name: 'Qwen 3 Coder 30B',
+    provider: 'Together (via HF)',
+    region: 'China',
+    inputPrice: 0.07,
+    outputPrice: 0.26,
+    contextWindow: 262144,
+    supportsCaching: false,
+    supportsBatch: false,
+    tier: 'coding',
     pricingUrl: 'https://huggingface.co/inference/models'
   },
   {
@@ -472,6 +524,19 @@ export const llmModels = [
     supportsCaching: false,
     supportsBatch: false,
     tier: 'reasoning',
+    pricingUrl: 'https://huggingface.co/inference/models'
+  },
+  {
+    id: 'hf-llama-4-scout',
+    name: 'Llama 4 Scout (Preview)',
+    provider: 'Together (via HF)',
+    region: 'US',
+    inputPrice: 0.11,
+    outputPrice: 0.34,
+    contextWindow: 131072,
+    supportsCaching: false,
+    supportsBatch: false,
+    tier: 'efficient',
     pricingUrl: 'https://huggingface.co/inference/models'
   },
   {
