@@ -125,8 +125,8 @@ function App() {
       const file = fileList[i]
       const procId = procIds[i].id
       try {
-        const text = await tokenize(file)
-        const tokens = getTiktokenTokens(text)
+        const fileData = await tokenize(file)
+        const tokens = getTiktokenTokens(fileData.content)
         newFiles.push({
           id: Math.random(),
           name: file.name,

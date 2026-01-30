@@ -13,6 +13,10 @@ export function estimateTokens(text) {
     return Math.ceil(wordCount * 1.3);
 }
 
+// Alias for compatibility with App.jsx
+export const getTiktokenTokens = estimateTokens;
+export const tokenize = readFileAsText;
+
 // Read file as text (handles multiple formats including PDF)
 export async function readFileAsText(file) {
     const extension = '.' + file.name.split('.').pop().toLowerCase();
