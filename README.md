@@ -1,16 +1,27 @@
-# React + Vite
+# LLM Pricing Comparison Tool
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, real-time tool to compare pricing across various Large Language Models (LLMs) including OpenAI, Anthropic, Google, Mistral, DeepSeek, Qwen, and Moonshot AI (Kimi).
 
-Currently, two official plugins are available:
+![Application Screenshot](./screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- **Real-time Cost Estimation**: Calculate costs based on text input or file uploads.
+- **PDF Support**: Extract text and tokens directly from PDF documents.
+- **Manual Overrides**: Manually set output token targets for precise comparison.
+- **Multimedia Models**: Support for ElevenLabs (Audio), Whisper (Audio), and Kling AI (Video).
+- **Responsive Design**: Dark/Light mode toggle and mobile-friendly table.
+- **Dynamic Normalization**: Compare models using different pricing units (tokens, characters, minutes) in a single view.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React + Vite
+- Framer Motion (Animations)
+- Recharts (Visualizations)
+- PDF.js (PDF Parsing)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+1. Install dependencies: `npm install`
+2. Run development server: `npm run dev`
+3. Build for production: `npm run build`
