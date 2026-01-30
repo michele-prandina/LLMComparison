@@ -384,7 +384,7 @@ function App() {
                         </td>
                         <td>{r.provider}</td>
                         <td>
-                          <span className="region-badge" style={{ backgroundColor: getRegionColor(r.region) }}>
+                          <span className="region-badge">
                             {r.region}
                           </span>
                         </td>

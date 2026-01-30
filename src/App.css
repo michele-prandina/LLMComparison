@@ -613,28 +613,7 @@ td {
 .region-badge {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-xs);
-  padding: var(--space-xs) var(--space-sm);
-  border-radius: var(--radius-sm);
-  font-size: 0.625rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.region-badge.us {
-  background: rgba(99, 102, 241, 0.1);
-  color: var(--region-us);
-}
-
-.region-badge.eu {
-  background: rgba(16, 185, 129, 0.1);
-  color: var(--region-eu);
-}
-
-.region-badge.china {
-  background: rgba(239, 68, 68, 0.1);
-  color: var(--region-china);
+  font-size: 1.125rem;
 }
 
 .price-cell {
